@@ -15,9 +15,9 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <Section className="relative bg-gradient-to-br from-white via-indigo-50/30 to-white overflow-hidden border-b border-indigo-100">
+      <Section className="relative bg-gradient-to-br from-white via-primary/5 to-white overflow-hidden border-b border-indigo-50">
         <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-72 h-72 bg-accent/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
 
         <div className="relative z-10 text-center max-w-4xl mx-auto py-12 md:py-20 px-4">
           <span className="inline-block py-1.5 px-4 bg-primary/10 text-primary rounded-full text-xs font-black mb-6 tracking-widest uppercase">
@@ -63,7 +63,7 @@ export default function Home() {
       <Section className="bg-white">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="order-2 md:order-1">
-            <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] bg-gradient-to-tr from-indigo-600 to-purple-400 rounded-3xl overflow-hidden shadow-2xl group">
+            <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] bg-gradient-to-tr from-[#5B189A] via-primary to-[#D8B4FE] rounded-3xl overflow-hidden shadow-2xl group">
               <Image
                 src="/images/african-woman-tech.png"
                 alt="Empowered African Woman in Tech"
@@ -99,7 +99,7 @@ export default function Home() {
       </Section>
 
       {/* The Program Section */}
-      <Section className="bg-gradient-to-br from-indigo-700 via-primary to-accent relative overflow-hidden py-24 md:py-32">
+      <Section className="bg-gradient-to-br from-[#5B189A] via-primary to-primary-hover relative overflow-hidden py-24 md:py-32">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.1),transparent)]"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
 
@@ -121,7 +121,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-black mb-4 text-white">{program.track}</h3>
                 <p className="text-white/80 text-sm mb-8 flex-grow leading-relaxed">{program.description}</p>
-                <Button href="/programs" className="w-full text-sm bg-white text-primary hover:bg-white/90 shadow-none">View Track Details</Button>
+                <Button href="/programs" className="w-full text-sm bg-slate-900 text-white hover:bg-slate-800 shadow-xl">View Track Details</Button>
               </Card>
             );
           })}
@@ -129,14 +129,14 @@ export default function Home() {
       </Section>
 
       {/* CTA Section */}
-      <Section className="bg-gradient-to-tr from-indigo-800 via-primary to-accent text-white py-24 text-center relative overflow-hidden">
+      <Section className="bg-gradient-to-tr from-[#5B189A] via-primary to-[#7A25D9] text-white py-24 text-center relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent)]"></div>
         <div className="relative z-10">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-8 tracking-tighter">Ready to join the <span className="italic underline decoration-accent decoration-8">sisterhood</span>?</h2>
           <p className="text-lg md:text-xl mb-12 opacity-80 max-w-2xl mx-auto leading-relaxed px-4">
             Applications for Cohort 1 of the FutureTech Program are now open. Be part of the first wave of TechQings.
           </p>
-          <Button href="/apply" className="text-lg px-12 py-5 shadow-2xl bg-white text-primary hover:bg-slate-50 transition-all font-black">
+          <Button href="/apply" className="text-lg px-12 py-5 shadow-2xl bg-slate-900 text-white hover:bg-slate-800 transition-all font-black">
             Apply to FutureTech
           </Button>
         </div>

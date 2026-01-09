@@ -14,7 +14,7 @@ export default function Programs() {
     return (
         <main>
             {/* Hero Section */}
-            <Section className="bg-gradient-to-br from-indigo-700 via-primary to-accent text-center relative overflow-hidden text-white py-24 md:py-32">
+            <Section className="bg-gradient-to-br from-[#5B189A] via-primary to-primary-hover text-center relative overflow-hidden text-white py-24 md:py-32">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mt-32 -mr-16"></div>
                 <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/5 rounded-full blur-3xl -mb-20 -ml-20"></div>
 
@@ -52,7 +52,7 @@ export default function Programs() {
                     </div>
                     <div className="grid grid-cols-2 gap-4 md:gap-6 relative">
                         <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-full"></div>
-                        <Card className="bg-indigo-700 mt-6 shadow-2xl border border-white/10 relative z-10">
+                        <Card className="bg-[#7A25D9] mt-6 shadow-2xl border border-white/10 relative z-10">
                             <Icons.Users className="w-8 h-8 text-white mb-4" />
                             <h3 className="font-black text-white mb-2">Mentorship</h3>
                             <p className="text-xs text-white/70 leading-relaxed">Connect with women leading tech at Fortune 500 companies.</p>
@@ -62,12 +62,12 @@ export default function Programs() {
                             <h3 className="font-black text-white mb-2">Real-World Projects</h3>
                             <p className="text-xs text-white/80 leading-relaxed">Build a portfolio that translates to global job markets.</p>
                         </Card>
-                        <Card className="bg-white border-indigo-100 shadow-xl relative z-10">
+                        <Card className="bg-white border-primary/20 shadow-xl relative z-10">
                             <Icons.Award className="w-8 h-8 text-primary mb-4" />
-                            <h3 className="font-black text-indigo-950 mb-2">Certification</h3>
+                            <h3 className="font-black text-slate-900 mb-2">Certification</h3>
                             <p className="text-xs text-slate-500 leading-relaxed font-medium">Validate your skills with our industry-endorsed certificate.</p>
                         </Card>
-                        <Card className="bg-indigo-50 border-primary/10 shadow-xl mt-[-1.5rem] md:mt-[-2.5rem] relative z-10">
+                        <Card className="bg-[#F3E8FF] border-primary/10 shadow-xl mt-[-1.5rem] md:mt-[-2.5rem] relative z-10">
                             <Icons.MessageSquare className="w-8 h-8 text-primary mb-4" />
                             <h3 className="font-black text-slate-900 mb-2">Community</h3>
                             <p className="text-xs text-slate-500 leading-relaxed font-medium">Join a lifetime alumni network of African tech leaders.</p>
@@ -77,7 +77,7 @@ export default function Programs() {
             </Section>
 
             {/* Tracks */}
-            <Section className="bg-gradient-to-tr from-primary via-indigo-600 to-primary relative overflow-hidden py-24">
+            <Section className="bg-gradient-to-tr from-[#5B189A] via-primary to-primary-hover relative overflow-hidden py-24">
                 <div className="absolute top-0 left-0 w-full h-full bg-[white/5] backdrop-blur-[2px]"></div>
 
                 <div className="relative z-10 text-center mb-20">
@@ -102,7 +102,7 @@ export default function Programs() {
                                     <li className="flex items-center gap-3 text-xs font-black text-white/90 uppercase tracking-widest leading-none bg-white/5 py-2.5 px-4 rounded-xl shadow-inner"><Icons.Check className="w-3.5 h-3.5 text-white" /> Curriculum by Experts</li>
                                     <li className="flex items-center gap-3 text-xs font-black text-white/90 uppercase tracking-widest leading-none bg-white/5 py-2.5 px-4 rounded-xl shadow-inner"><Icons.Check className="w-3.5 h-3.5 text-white" /> Practical Capstone</li>
                                 </ul>
-                                <Button href={`/apply?track=${p.track.toLowerCase().replace(/ & /g, '-')}`} className="w-full bg-white text-primary hover:bg-slate-50 shadow-lg shadow-white/10">Enroll in Track</Button>
+                                <Button href={`/apply?track=${p.track.toLowerCase().replace(/ & /g, '-')}`} className="w-full bg-slate-900 text-white hover:bg-slate-800 shadow-xl">Enroll in Track</Button>
                             </Card>
                         );
                     })}

@@ -11,10 +11,13 @@ export default function About() {
     return (
         <main>
             {/* Hero Section */}
-            <Section className="bg-gradient-to-br from-indigo-700 via-primary to-accent text-white text-center py-24 md:py-32 relative overflow-hidden">
+            <Section className="bg-gradient-to-br from-[#5B189A] via-primary to-[#7A25D9] text-white text-center py-24 md:py-32 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mt-32 -mr-16"></div>
-                <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight relative z-10">Our Story</h1>
-                <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed relative z-10 px-4">
+                <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight relative z-10 uppercase">Our Story</h1>
+                <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed relative z-10 px-4 font-bold italic mb-4">
+                    "Empowering African women to build, lead, and innovate in the future of technology."
+                </p>
+                <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed relative z-10 px-4">
                     Founded on the principle of collective growth, TechQings Africa is a sanctuary for ambitious African women in tech.
                 </p>
             </Section>
@@ -24,14 +27,14 @@ export default function About() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
                     <div>
                         <h2 className="text-2xl md:text-3xl font-black mb-6 text-slate-900 border-l-4 border-primary pl-4 uppercase tracking-tighter">Our Mission</h2>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                            To empower 10,000 young African women with future-ready tech skills and professional mentorship by 2030, fostering a generation of leaders in AI, Cloud, and Security.
+                        <p className="text-lg text-slate-600 leading-relaxed font-medium">
+                            TechQings Africa exists to bridge the access, confidence, and opportunity gap faced by young African women by providing world-class training, mentorship, and community support in emerging and future-ready technology fields.
                         </p>
                     </div>
                     <div>
                         <h2 className="text-2xl md:text-3xl font-black mb-6 text-slate-900 border-l-4 border-primary pl-4 uppercase tracking-tighter">Our Vision</h2>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                            A tech-forward Africa where women lead global innovations, breaking barriers and creating solutions that matter.
+                        <p className="text-lg text-slate-600 leading-relaxed font-medium">
+                            To become Africa’s leading community for empowering young women to thrive and lead in future-driven technology careers.
                         </p>
                     </div>
                 </div>
@@ -91,7 +94,7 @@ export default function About() {
                     <h2 className="text-3xl md:text-5xl font-extrabold mb-8 tracking-tighter relative z-10 uppercase">Ready to start your <span className="italic underline decoration-white/30 decoration-8">journey</span>?</h2>
                     <p className="text-lg md:text-xl mb-12 text-white/80 max-w-2xl mx-auto leading-relaxed relative z-10 font-medium">Whether you're starting your journey or looking to mentor, TechQings Africa welcomes you.</p>
                     <div className="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
-                        <Button href="/apply" className="bg-white text-primary hover:bg-slate-50 px-12 py-5 text-lg font-black shadow-xl">Apply to Program</Button>
+                        <Button href="/apply" className="bg-slate-900 text-white hover:bg-slate-800 px-12 py-5 text-lg font-black shadow-xl">Apply to Program</Button>
                         <Button href="/contact" variant="outline" className="border-white text-white hover:bg-white/10 px-12 py-5 text-lg font-black tracking-widest uppercase">Partner with Us</Button>
                     </div>
                 </div>

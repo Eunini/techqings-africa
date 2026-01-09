@@ -7,6 +7,8 @@ interface ButtonProps {
     onClick?: () => void;
     variant?: 'primary' | 'secondary' | 'outline';
     className?: string;
+    disabled?: boolean;
+    type?: 'button' | 'submit' | 'reset';
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -14,7 +16,9 @@ const Button: React.FC<ButtonProps> = ({
     href,
     onClick,
     variant = 'primary',
-    className = ''
+    className = '',
+    disabled = false,
+    type
 }) => {
     const baseStyles = "px-6 py-3 rounded-full font-bold transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 active:scale-95";
     const variants = {
@@ -34,7 +38,12 @@ const Button: React.FC<ButtonProps> = ({
     }
 
     return (
-        <button onClick={onClick} className={combinedStyles}>
+        <button 
+            type={type} 
+            onClick={onClick} 
+            className={combinedStyles} 
+            disabled={disabled}
+        >
             {children}
         </button>
     );

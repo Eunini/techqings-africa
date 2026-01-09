@@ -5,18 +5,18 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
-  /* Slate 900 for general text */
 
-  /* Brand Colors - Refined for Vibrancy and Contrast */
-  --primary: #4f46e5;
-  /* Indigo 600 - More vibrant */
+  /* TechQings Branding - Logo Purple Scale */
+  --primary: #8B2CF5;
+  /* Logo Purple */
+  --primary-hover: #7A25D9;
   --primary-foreground: #ffffff;
   --secondary: #f8fafc;
-  /* Slate 50 */
-  --accent: #d8b4fe;
-  /* Purple 300 */
+  --accent: #F3E8FF;
+  /* Purple Light Tint */
+  --accent-foreground: #5B189A;
+  /* Purple Dark Contrast */
   --muted: #475569;
-  /* Slate 600 - Better contrast than grey-500 */
 
   --card: #ffffff;
   --card-foreground: #0f172a;
