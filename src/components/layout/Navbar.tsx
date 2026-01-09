@@ -38,7 +38,7 @@ const Navbar = () => {
                             className="object-contain"
                         />
                     </div>
-                    <span className={`font-black text-xl md:text-2xl tracking-tighter transition-colors ${scrolled ? 'text-slate-900' : 'text-indigo-950'}`}>
+                    <span className={`font-black text-xl md:text-2xl tracking-tighter transition-colors ${scrolled ? 'text-slate-900' : 'text-white'}`}>
                         TECHQINGS<span className="text-primary italic">AFRICA</span>
                     </span>
                 </Link>
@@ -49,12 +49,12 @@ const Navbar = () => {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className={`text-sm font-bold tracking-wide transition-all duration-300 hover:scale-105 ${pathname === link.href ? 'text-primary' : scrolled ? 'text-slate-600 hover:text-primary' : 'text-indigo-950 hover:text-primary'}`}
+                            className={`text-sm font-bold tracking-wide transition-all duration-300 hover:scale-105 ${pathname === link.href ? 'text-primary' : scrolled ? 'text-slate-600 hover:text-primary' : 'text-white/90 hover:text-white'}`}
                         >
                             {link.name}
                         </Link>
                     ))}
-                    <Button href="/apply" className="px-6 py-2.5 text-xs uppercase tracking-widest shadow-none hover:shadow-lg">
+                    <Button href="/apply" className={`px-6 py-2.5 text-xs uppercase tracking-widest shadow-none hover:shadow-lg transition-all ${scrolled ? '' : 'bg-white text-primary hover:bg-white/90'}`}>
                         Apply Now
                     </Button>
                 </div>

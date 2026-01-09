@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
@@ -61,9 +62,14 @@ export default function Home() {
       <Section className="bg-white">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="order-2 md:order-1">
-            <div className="aspect-square bg-gradient-to-tr from-indigo-600 to-purple-400 rounded-3xl overflow-hidden shadow-2xl relative flex items-center justify-center group">
-              <div className="text-9xl group-hover:scale-110 transition-transform duration-500">👩🏾‍💻</div>
-              <div className="absolute inset-0 bg-black/10"></div>
+            <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] bg-gradient-to-tr from-indigo-600 to-purple-400 rounded-3xl overflow-hidden shadow-2xl group">
+              <Image
+                src="/images/african-woman-tech.png"
+                alt="Empowered African Woman in Tech"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-indigo-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
             </div>
           </div>
           <div className="order-1 md:order-2">
