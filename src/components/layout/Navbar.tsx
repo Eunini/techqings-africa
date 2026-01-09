@@ -61,32 +61,32 @@ const Navbar = () => {
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden p-2 text-slate-900 focus:outline-none"
+                    className={`md:hidden p-2 focus:outline-none transition-colors ${scrolled ? 'text-slate-900' : 'text-white'}`}
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Toggle Menu"
                 >
                     <div className="w-6 h-5 relative flex flex-col justify-between">
-                        <span className={`w-full h-0.5 bg-current transition-all ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                        <span className={`w-full h-0.5 bg-current transition-all ${isOpen ? 'opacity-0' : ''}`}></span>
-                        <span className={`w-full h-0.5 bg-current transition-all ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+                        <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                        <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isOpen ? 'opacity-0 scale-x-0' : ''}`}></span>
+                        <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
                     </div>
                 </button>
             </div>
 
             {/* Mobile Menu */}
-            <div className={`md:hidden absolute top-full left-0 w-full bg-white border-b border-indigo-100 shadow-xl transition-all duration-300 ${isOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
-                <div className="container mx-auto px-4 py-8 flex flex-col gap-6">
+            <div className={`md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-b border-indigo-100 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 origin-top ${isOpen ? 'opacity-100 scale-y-100 pointer-events-auto' : 'opacity-0 scale-y-95 pointer-events-none'}`}>
+                <div className="container mx-auto px-6 py-12 flex flex-col gap-8">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
                             href={link.href}
-                            className={`text-lg font-bold ${pathname === link.href ? 'text-primary' : 'text-slate-900'}`}
+                            className={`text-xl font-black uppercase tracking-tighter transition-colors ${pathname === link.href ? 'text-primary' : 'text-slate-900'}`}
                             onClick={() => setIsOpen(false)}
                         >
                             {link.name}
                         </Link>
                     ))}
-                    <Button href="/apply" className="w-full py-4 text-center" onClick={() => setIsOpen(false)}>Apply Now</Button>
+                    <Button href="/apply" className="w-full py-5 text-center font-black uppercase tracking-widest text-sm shadow-xl shadow-primary/20" onClick={() => setIsOpen(false)}>Apply Now</Button>
                 </div>
             </div>
         </nav>

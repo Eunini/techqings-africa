@@ -12,9 +12,10 @@ export const metadata: Metadata = {
 export default function Mentors() {
     return (
         <main>
-            <Section className="bg-slate-900 text-white text-center">
-                <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">Our Mentors</h1>
-                <p className="text-lg md:text-xl opacity-80 max-w-2xl mx-auto leading-relaxed">
+            <Section className="bg-gradient-to-br from-indigo-700 via-primary to-accent text-white text-center py-24 md:py-32 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mt-32 -mr-16"></div>
+                <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight relative z-10 uppercase">Our Mentors</h1>
+                <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed relative z-10 px-4">
                     Learn from industry leaders who are passionate about scaling African female talent.
                 </p>
             </Section>
@@ -22,30 +23,30 @@ export default function Mentors() {
             <Section className="bg-white">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {mentors.map((mentor) => (
-                        <Card key={mentor.name} className="text-center p-8 bg-slate-50/50 border-indigo-50/50">
-                            <div className="text-6xl mb-6 bg-white shadow-inner w-24 h-24 rounded-full flex items-center justify-center mx-auto border-4 border-white">
+                        <Card key={mentor.name} className="text-center p-10 bg-indigo-50/20 border-indigo-50/50 hover:bg-white hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 rounded-[2rem] group">
+                            <div className="text-6xl mb-8 bg-white shadow-xl shadow-indigo-100/50 w-28 h-28 rounded-full flex items-center justify-center mx-auto border-4 border-white transition-transform group-hover:scale-110">
                                 {mentor.image}
                             </div>
-                            <h3 className="text-xl font-bold mb-1 text-slate-900">{mentor.name}</h3>
-                            <p className="text-primary font-bold text-xs mb-2 uppercase tracking-widest">{mentor.role}</p>
-                            <p className="text-slate-500 text-[10px] font-black mb-4 uppercase tracking-[0.2em]">{mentor.company}</p>
-                            <div className="inline-block py-1 px-3 bg-indigo-100 text-indigo-700 text-[10px] font-black rounded-full mb-6 uppercase tracking-wider">
+                            <h3 className="text-xl font-black mb-1 text-slate-900 uppercase tracking-tight">{mentor.name}</h3>
+                            <p className="text-primary font-black text-xs mb-2 uppercase tracking-[0.2em]">{mentor.role}</p>
+                            <p className="text-slate-400 text-[10px] font-black mb-6 uppercase tracking-[0.3em]">{mentor.company}</p>
+                            <div className="inline-block py-2 px-4 bg-primary text-white text-[10px] font-black rounded-xl mb-8 uppercase tracking-widest shadow-lg shadow-primary/20">
                                 {mentor.track}
                             </div>
-                            <p className="text-sm text-muted leading-relaxed">{mentor.bio}</p>
+                            <p className="text-sm text-slate-500 leading-relaxed font-medium">{mentor.bio}</p>
                         </Card>
                     ))}
                 </div>
             </Section>
 
-            <Section className="bg-indigo-50/50">
-                <div className="max-w-4xl mx-auto bg-white rounded-3xl p-10 md:p-16 text-center shadow-xl border border-indigo-100 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mt-16 -mr-16"></div>
-                    <h2 className="text-3xl font-extrabold mb-6 text-slate-900">Want to give back?</h2>
-                    <p className="text-lg text-muted mb-10 leading-relaxed">
+            <Section className="bg-white pb-24">
+                <div className="max-w-4xl mx-auto bg-gradient-to-br from-indigo-600 via-primary to-accent rounded-[3rem] p-10 md:p-20 text-center text-white shadow-2xl relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full -mt-24 -mr-24 blur-2xl"></div>
+                    <h2 className="text-3xl md:text-4xl font-black mb-8 text-white uppercase tracking-tighter">Want to <span className="italic underline decoration-white/30 decoration-8">give back</span>?</h2>
+                    <p className="text-lg md:text-xl text-white/80 mb-12 leading-relaxed font-medium">
                         Join our private network of mentors and help shape the next wave of tech leaders. Your expertise is the bridge they need.
                     </p>
-                    <Button href="/apply?type=mentor" className="px-10 py-4 shadow-xl">Join the Mentor Network</Button>
+                    <Button href="/apply?type=mentor" className="px-12 py-5 bg-white text-primary hover:bg-slate-50 text-lg font-black shadow-2xl transition-all">Join the Mentor Network</Button>
                 </div>
             </Section>
         </main>
