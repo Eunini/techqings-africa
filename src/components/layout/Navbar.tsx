@@ -54,7 +54,7 @@ const Navbar = () => {
                             {link.name}
                         </Link>
                     ))}
-                    <Button href="/apply" className={`px-6 py-2.5 text-xs uppercase tracking-widest shadow-none hover:shadow-lg transition-all ${scrolled ? '' : 'bg-white text-primary hover:bg-white/90'}`}>
+                    <Button href="/apply" className="px-6 py-2.5 text-xs uppercase tracking-widest shadow-none hover:shadow-lg">
                         Apply Now
                     </Button>
                 </div>
