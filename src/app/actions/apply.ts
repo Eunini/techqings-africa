@@ -90,7 +90,7 @@ export async function submitApplication(formData: FormData) {
         ];
 
         // 1. Save to Google Sheets
-        await appendToSheet(row);
+        await appendToSheet([row]);
 
         // 2. Send Confirmation Email
         await sendConfirmationEmail(validatedData.email, validatedData.firstName, validatedData.type);

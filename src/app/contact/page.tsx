@@ -63,7 +63,7 @@ export default function Contact() {
 
                     <div className="px-4">
                         <Card className="p-10 md:p-14 border border-slate-200 shadow-sm rounded-xl">
-                            <h3 className="text-2xl font-white mb-10 text-slate-900 uppercase tracking-tight">Send a <span className="text-primary italic">Message</span></h3>
+                            <h3 className="text-2xl font-black mb-10 text-white uppercase tracking-tight">Send a <span className="text-primary italic">Message</span></h3>
                             <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
                                 <div>
                                     <label className="block text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Topic of Interest</label>

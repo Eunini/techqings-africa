@@ -68,7 +68,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="mt-24 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] font-black uppercase tracking-[0.3em] text-slate-600">
+                <div className="mt-24 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] font-black uppercase tracking-[0.3em] text-slate-100">
                     <p>&copy; {new Date().getFullYear()} TechQings Africa Community. All rights reserved.</p>
                     <div className="flex gap-10">
                         <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
