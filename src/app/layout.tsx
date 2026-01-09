@@ -1,15 +1,7 @@
 import type { Metadata } from "next";
-import { Ubuntu } from 'next/font/google';
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-
-const ubuntu = Ubuntu({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '700'],
-  variable: '--font-ubuntu',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   // ... existing metadata ...
@@ -48,8 +40,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={ubuntu.variable}>
-      <body className="font-ubuntu antialiased">
+    <html lang="en">
+      <body className="antialiased font-sans">
         <Navbar />
         <main className="min-h-screen pt-20">
           {children}
