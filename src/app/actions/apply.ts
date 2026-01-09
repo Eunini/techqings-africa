@@ -13,6 +13,29 @@ const applicationSchema = z.object({
     motivation: z.string().optional(),
     linkedin: z.string().url().optional(),
     type: z.enum(['learner', 'mentor']),
+    sessionPreference: z.enum(['Tuesday & Thursday', 'Weekends (Sat-Sun)', 'Either']).optional(),
+    hasPC: z.enum(['Yes', 'No']).optional(),
+    hasInternet: z.enum(['Yes', 'No']).optional(),
+    occupation: z.enum(['Student', 'Working / Employed', 'Self-employed', 'Other']).optional(),
+    yearsExperience: z.preprocess((val) => {
+        if (val === null || val === undefined || val === '') return undefined;
+        const n = Number(val);
+        return Number.isNaN(n) ? undefined : n;
+    }, z.number().nonnegative().optional()),
+    preferredTime: z.string().optional(),
+    mentorBio: z.string().optional(),
+    expertise: z.string().optional(),
+    menteeCapacity: z.enum(['1', '2-3', '4-5', '6+']).optional(),
+    yearsInTech: z.preprocess((val) => {
+        if (val === null || val === undefined || val === '') return undefined;
+        const n = Number(val);
+        return Number.isNaN(n) ? undefined : n;
+    }, z.number().nonnegative().optional()),
+    yearsMentoring: z.preprocess((val) => {
+        if (val === null || val === undefined || val === '') return undefined;
+        const n = Number(val);
+        return Number.isNaN(n) ? undefined : n;
+    }, z.number().nonnegative().optional()),
     _honey: z.string().max(0, "Spam detected"), // Honeypot field
 });
 
@@ -25,6 +48,17 @@ export async function submitApplication(formData: FormData) {
         track: formData.get('track'),
         motivation: formData.get('motivation'),
         linkedin: formData.get('linkedin'),
+        sessionPreference: formData.get('sessionPreference'),
+        hasPC: formData.get('hasPC'),
+        hasInternet: formData.get('hasInternet'),
+        occupation: formData.get('occupation'),
+        yearsExperience: formData.get('yearsExperience'),
+        preferredTime: formData.get('preferredTime'),
+        mentorBio: formData.get('mentorBio'),
+        expertise: formData.get('expertise'),
+        menteeCapacity: formData.get('menteeCapacity'),
+        yearsInTech: formData.get('yearsInTech'),
+        yearsMentoring: formData.get('yearsMentoring'),
         type: formData.get('type'),
         _honey: formData.get('_honey'),
     };
@@ -41,6 +75,17 @@ export async function submitApplication(formData: FormData) {
             validatedData.email,
             validatedData.phone,
             validatedData.track,
+            validatedData.sessionPreference || 'N/A',
+            validatedData.hasPC || 'N/A',
+            validatedData.hasInternet || 'N/A',
+            validatedData.occupation || 'N/A',
+            validatedData.yearsExperience !== undefined ? String(validatedData.yearsExperience) : 'N/A',
+            validatedData.preferredTime || 'N/A',
+            validatedData.mentorBio || 'N/A',
+            validatedData.expertise || 'N/A',
+            validatedData.menteeCapacity || 'N/A',
+            validatedData.yearsInTech !== undefined ? String(validatedData.yearsInTech) : 'N/A',
+            validatedData.yearsMentoring !== undefined ? String(validatedData.yearsMentoring) : 'N/A',
             validatedData.motivation || validatedData.linkedin || 'N/A'
         ];
 
@@ -56,7 +101,7 @@ export async function submitApplication(formData: FormData) {
         return { success: true };
     } catch (error) {
         if (error instanceof z.ZodError) {
-            return { success: false, error: error.errors[0].message };
+            return { success: false, error: error.issues?.[0]?.message || 'Validation error' };
         }
         console.error('Submission error:', error);
         return { success: false, error: "Failed to process application. Please try again." };

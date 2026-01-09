@@ -8,12 +8,12 @@ import { Mail, Instagram, Facebook } from "lucide-react";
 export default function Contact() {
     return (
         <main className="pt-0">
-            <Section className="bg-gradient-to-br from-[#5B189A] via-primary to-primary-hover text-white text-center py-24 md:py-32 relative overflow-hidden">
+            <Section className="bg-linear-to-br from-[#5B189A] via-primary to-primary-hover text-white text-center py-24 md:py-32 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent)]"></div>
                 <div className="relative z-10 px-4">
                     <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight uppercase">Contact Us</h1>
                     <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed font-medium">
-                        Have questions about the community or the FutureTech Program? We're here to help.
+                        Have questions about the community or the FutureTech Program? We&apos;re here to help.
                     </p>
                 </div>
             </Section>
@@ -62,12 +62,12 @@ export default function Contact() {
                     </div>
 
                     <div className="px-4">
-                        <Card className="p-10 md:p-14 border border-primary/10 shadow-[0_32px_64px_-16px_rgba(139,44,245,0.1)] rounded-[3rem]">
-                            <h3 className="text-2xl font-black mb-10 text-slate-900 uppercase tracking-tight">Send a <span className="text-primary italic">Message</span></h3>
+                        <Card className="p-10 md:p-14 border border-slate-200 shadow-sm rounded-xl">
+                            <h3 className="text-2xl font-white mb-10 text-slate-900 uppercase tracking-tight">Send a <span className="text-primary italic">Message</span></h3>
                             <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
                                 <div>
                                     <label className="block text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Topic of Interest</label>
-                                    <select className="w-full px-6 py-5 rounded-2xl border border-indigo-50 bg-indigo-50/20 focus:bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 transition-all text-slate-900 font-bold appearance-none">
+                                    <select className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all text-slate-900 font-bold appearance-none">
                                         <option>FutureTech Program Query</option>
                                         <option>Partnership Interest</option>
                                         <option>Volunteer as Mentor</option>
@@ -76,9 +76,9 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <label className="block text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Your Message</label>
-                                    <textarea rows={4} className="w-full px-6 py-5 rounded-2xl border border-primary/10 bg-[#F3E8FF]/20 focus:bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 transition-all text-slate-900 font-medium placeholder:text-slate-400" placeholder="Tell us how we can help you..."></textarea>
+                                    <textarea rows={4} className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all text-slate-900 font-medium placeholder:text-slate-400" placeholder="Tell us how we can help you..."></textarea>
                                 </div>
-                                <Button className="w-full py-6 font-black uppercase tracking-[0.3em] text-xs shadow-xl shadow-primary/20">Send Message</Button>
+                                <Button className="w-full py-4 font-black uppercase tracking-[0.3em] text-xs shadow-md rounded-lg">Send Message</Button>
                             </form>
                         </Card>
                     </div>

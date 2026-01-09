@@ -23,12 +23,12 @@ export async function sendConfirmationEmail(email: string, firstName: string, ty
     }
 }
 
-export async function sendAdminNotification(data: any) {
+export async function sendAdminNotification(data: Record<string, unknown>) {
     try {
         await resend.emails.send({
             from: 'TechQings Systems <system@techqings.africa>',
             to: 'techqings@gmail.com',
-            subject: `New ${data.type} Application: ${data.firstName} ${data.lastName}`,
+            subject: `New ${(data.type as string)} Application: ${(data.firstName as string)} ${(data.lastName as string)}`,
             html: `<pre>${JSON.stringify(data, null, 2)}</pre>`,
         });
     } catch (error) {

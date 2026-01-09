@@ -71,18 +71,18 @@ function ApplyForm() {
     return (
         <form className="grid grid-cols-1 gap-8" onSubmit={handleSubmit}>
             <div className="flex justify-center mb-8">
-                <nav className="inline-flex p-1.5 bg-slate-50 border border-indigo-50 rounded-2xl shadow-inner" aria-label="Application Type Toggle">
+                <nav className="inline-flex p-1 bg-slate-100 border border-slate-300 rounded-lg" aria-label="Application Type Toggle">
                     <button
                         type="button"
                         onClick={() => setActiveTab('learner')}
-                        className={`px-8 py-3 rounded-xl text-sm font-black uppercase tracking-widest transition-all ${activeTab === 'learner' ? 'bg-white text-primary shadow-lg' : 'text-slate-400 hover:text-slate-600'}`}
+                        className={`px-6 py-2 rounded-md text-xs font-black uppercase tracking-widest transition-all ${activeTab === 'learner' ? 'bg-primary text-white shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
                     >
                         Enroll Learner
                     </button>
                     <button
                         type="button"
                         onClick={() => setActiveTab('mentor')}
-                        className={`px-8 py-3 rounded-xl text-sm font-black uppercase tracking-widest transition-all ${activeTab === 'mentor' ? 'bg-white text-primary shadow-lg' : 'text-slate-400 hover:text-slate-600'}`}
+                        className={`px-6 py-2 rounded-md text-xs font-black uppercase tracking-widest transition-all ${activeTab === 'mentor' ? 'bg-primary text-white shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
                     >
                         Join Mentor
                     </button>
@@ -95,18 +95,18 @@ function ApplyForm() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">First Name</label>
-                    <input required name="firstName" type="text" className="w-full px-6 py-5 rounded-2xl border border-indigo-50 bg-indigo-50/20 focus:bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 transition-all text-slate-900 font-bold" placeholder="Amina" />
+                    <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">First Name <span className="text-red-500">*</span></label>
+                    <input required name="firstName" type="text" className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all text-slate-900 font-bold" placeholder="Amina" />
                 </div>
                 <div>
-                    <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Last Name</label>
-                    <input required name="lastName" type="text" className="w-full px-6 py-5 rounded-2xl border border-indigo-50 bg-indigo-50/20 focus:bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 transition-all text-slate-900 font-bold" placeholder="Oke" />
+                    <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Last Name <span className="text-red-500">*</span></label>
+                    <input required name="lastName" type="text" className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all text-slate-900 font-bold" placeholder="Oke" />
                 </div>
             </div>
 
             <div>
-                <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Email Address</label>
-                <input required name="email" type="email" className="w-full px-6 py-5 rounded-2xl border border-indigo-50 bg-indigo-50/20 focus:bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 transition-all text-slate-900 font-bold" placeholder="hello@example.com" />
+                <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Email Address <span className="text-red-500">*</span></label>
+                <input required name="email" type="email" className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all text-slate-900 font-bold" placeholder="hello@example.com" />
             </div>
 
             {/* Hidden field for active tab type */}
@@ -114,9 +114,9 @@ function ApplyForm() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Interested Track</label>
+                    <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Interested Track <span className="text-red-500">*</span></label>
                     <div className="relative">
-                        <select required name="track" value={prefilledTrack} onChange={(e) => setPrefilledTrack(e.target.value)} className="w-full px-6 py-5 rounded-2xl border border-indigo-50 bg-indigo-50/20 focus:bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 transition-all text-slate-900 font-bold appearance-none">
+                        <select required name="track" value={prefilledTrack} onChange={(e) => setPrefilledTrack(e.target.value)} className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all text-slate-900 font-bold appearance-none">
                             <option>AI & Machine Learning</option>
                             <option>Cloud / DevOps Engineering</option>
                             <option>Cybersecurity</option>
@@ -127,36 +127,137 @@ function ApplyForm() {
                     </div>
                 </div>
                 <div>
-                    <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Phone Number</label>
-                    <input required name="phone" type="tel" className="w-full px-6 py-5 rounded-2xl border border-indigo-50 bg-indigo-50/20 focus:bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 transition-all text-slate-900 font-bold" placeholder="+234 ..." />
+                    <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Phone Number (WhatsApp) <span className="text-red-500">*</span></label>
+                    <input required name="phone" type="tel" className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all text-slate-900 font-bold" placeholder="+234 ..." />
                 </div>
             </div>
 
-            {activeTab === 'learner' ? (
-                <div>
-                    <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Your Tech Motivation</label>
-                    <textarea required name="motivation" rows={5} className="w-full px-6 py-5 rounded-2xl border border-indigo-50 bg-indigo-50/20 focus:bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 transition-all text-slate-900 font-medium" placeholder="Tell us why you want to join this cohort..."></textarea>
-                </div>
-            ) : (
-                <div>
-                    <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">LinkedIn Profile URL</label>
-                    <input required name="linkedin" type="url" className="w-full px-6 py-5 rounded-2xl border border-indigo-50 bg-indigo-50/20 focus:bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 transition-all text-slate-900 font-bold" placeholder="https://linkedin.com/in/yourprofile" />
-                </div>
-            )}
+            <div>
+                {activeTab === 'learner' ? (
+                    <>
+                        <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Your Tech Motivation <span className="text-red-500">*</span></label>
+                        <textarea required name="motivation" rows={4} className="w-full px-6 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-slate-900 font-medium" placeholder="Tell us why you want to join this cohort..."></textarea>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                            <div>
+                                <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Session Preference <span className="text-red-500">*</span></label>
+                                <select required name="sessionPreference" className="w-full px-6 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-slate-900 font-bold">
+                                    <option>Tuesday & Thursday</option>
+                                    <option>Weekends (Sat-Sun)</option>
+                                    <option>Either</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Do you have a PC? <span className="text-red-500">*</span></label>
+                                <select required name="hasPC" className="w-full px-6 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-slate-900 font-bold">
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                            <div>
+                                <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Do you have reliable internet? <span className="text-red-500">*</span></label>
+                                <select required name="hasInternet" className="w-full px-6 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-slate-900 font-bold">
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Are you a student or working? <span className="text-red-500">*</span></label>
+                                <select required name="occupation" className="w-full px-6 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-slate-900 font-bold">
+                                    <option>Student</option>
+                                    <option>Working / Employed</option>
+                                    <option>Self-employed</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                            <div>
+                                <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Years of experience (tech) <span className="text-slate-400">(optional)</span></label>
+                                <input name="yearsExperience" type="number" min={0} className="w-full px-6 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-slate-900 font-medium" placeholder="0" />
+                            </div>
+                        </div>
+                    </>
+                ) : (
+                    <>
+                        <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">LinkedIn Profile URL <span className="text-red-500">*</span></label>
+                        <input required name="linkedin" type="url" className="w-full px-6 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-slate-900 font-bold" placeholder="https://linkedin.com/in/yourprofile" />
+
+                        <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3 mt-6">Your Mentoring Bio <span className="text-red-500">*</span></label>
+                        <textarea required name="mentorBio" rows={4} className="w-full px-6 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-slate-900 font-medium" placeholder="Tell us about your experience, expertise, and what you want to mentor..."></textarea>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                            <div>
+                                <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Session Preference <span className="text-red-500">*</span></label>
+                                <select required name="sessionPreference" className="w-full px-6 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-slate-900 font-bold">
+                                    <option>Tuesday & Thursday</option>
+                                    <option>Weekends (Sat-Sun)</option>
+                                    <option>Either</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Are you a student or working? <span className="text-red-500">*</span></label>
+                                <select required name="occupation" className="w-full px-6 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-slate-900 font-bold">
+                                    <option>Student</option>
+                                    <option>Working / Employed</option>
+                                    <option>Self-employed</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                            <div>
+                                <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Primary expertise area <span className="text-red-500">*</span></label>
+                                <select required name="expertise" className="w-full px-6 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-slate-900 font-bold">
+                                    <option>AI & Machine Learning</option>
+                                    <option>Cloud / DevOps Engineering</option>
+                                    <option>Cybersecurity</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">How many mentees can you mentor? <span className="text-red-500">*</span></label>
+                                <select required name="menteeCapacity" className="w-full px-6 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-slate-900 font-bold">
+                                    <option>1</option>
+                                    <option>2-3</option>
+                                    <option>4-5</option>
+                                    <option>6+</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                            <div>
+                                <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Years in tech <span className="text-red-500">*</span></label>
+                                <input required name="yearsInTech" type="number" min={0} className="w-full px-6 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-slate-900 font-medium" placeholder="0" />
+                            </div>
+                            <div>
+                                <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Years mentoring experience <span className="text-slate-400">(optional)</span></label>
+                                <input name="yearsMentoring" type="number" min={0} className="w-full px-6 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-slate-900 font-medium" placeholder="0" />
+                            </div>
+                        </div>
+                    </>
+                )}
+            </div>
 
             {/* Honeypot field for anti-spam */}
             <input type="text" name="_honey" style={{ display: 'none' }} />
 
             {status === 'error' && (
-                <div className="flex items-center gap-3 p-4 bg-red-50 text-red-600 rounded-xl border border-red-100">
-                    <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                <div className="flex items-center gap-3 p-4 bg-red-50 text-red-600 rounded-lg border border-red-200 shadow-sm">
+                    <AlertCircle className="w-5 h-5 shrink-0" />
                     <p className="text-sm font-bold">{errorMessage || 'Something went wrong. Please try again.'}</p>
                 </div>
             )}
 
             <Button
                 disabled={status === 'loading'}
-                className="w-full py-6 bg-slate-900 text-white hover:bg-slate-800 text-sm font-black uppercase tracking-[0.3em] shadow-xl shadow-primary/20 mt-4 disabled:opacity-70"
+                className="w-full py-4 bg-primary text-white hover:bg-primary/90 text-sm font-black uppercase tracking-[0.3em] shadow-md mt-4 disabled:opacity-70 rounded-lg"
             >
                 {status === 'loading' ? (
                     <span className="flex items-center gap-2">
@@ -174,7 +275,7 @@ export default function Apply() {
     return (
         <main className="pt-0">
             <header>
-                <Section className="bg-gradient-to-br from-indigo-700 via-primary to-accent text-white text-center py-24 md:py-32 relative overflow-hidden">
+                <Section className="bg-linear-to-br from-primary via-primary/80 to-purple-600 text-white text-center py-24 md:py-32 relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent)]"></div>
                     <div className="relative z-10 px-4">
                         <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight uppercase">Join the Sisterhood</h1>
@@ -187,7 +288,7 @@ export default function Apply() {
 
             <Section className="bg-white pb-32">
                 <div className="max-w-3xl mx-auto -mt-20 relative z-20 px-4">
-                    <Card className="p-8 md:p-16 border border-indigo-50 shadow-[0_32px_64px_-16px_rgba(79,70,229,0.1)] rounded-[3rem] bg-white">
+                    <Card className="p-8 md:p-16 border border-slate-200 shadow-sm rounded-xl bg-white">
                         <Suspense fallback={<div className="flex items-center justify-center py-20"><Loader2 className="w-8 h-8 animate-spin text-primary" /></div>}>
                             <ApplyForm />
                         </Suspense>
