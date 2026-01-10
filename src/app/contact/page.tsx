@@ -18,22 +18,22 @@ export default function Contact() {
                 </div>
             </Section>
 
-            <Section className="bg-white">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 max-w-7xl mx-auto items-center">
-                    <div className="px-4">
-                        <h2 className="text-3xl md:text-4xl font-black mb-8 text-slate-900 uppercase tracking-tighter">Get in <span className="text-primary italic">Touch</span></h2>
-                        <p className="text-lg text-slate-500 mb-12 leading-relaxed font-medium">
+            <Section className="bg-white py-16 md:py-24 lg:py-32">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-20 max-w-7xl mx-auto items-center">
+                    <div className="px-4 md:px-0">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-6 sm:mb-8 text-slate-900 uppercase tracking-tighter">Get in <span className="text-primary italic">Touch</span></h2>
+                        <p className="text-base sm:text-lg text-slate-500 mb-8 sm:mb-10 md:mb-12 leading-relaxed font-medium">
                             We respond to all inquiries within 48 hours. Follow our social channels for real-time updates on Cohort 1.
                         </p>
 
-                        <div className="space-y-10">
-                            <div className="flex items-center gap-6 group">
-                                <div className="w-16 h-16 bg-[#F3E8FF] text-primary rounded-2xl flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-white transition-all shadow-sm group-hover:shadow-lg group-hover:-translate-y-1">
+                        <div className="space-y-6 sm:space-y-8 md:space-y-10">
+                            <div className="flex items-start sm:items-center gap-4 sm:gap-6 group">
+                                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#F3E8FF] text-primary rounded-2xl flex items-center justify-center text-lg sm:text-2xl group-hover:bg-primary group-hover:text-white transition-all shadow-sm group-hover:shadow-lg group-hover:-translate-y-1 flex-shrink-0">
                                     <Mail className="w-8 h-8" />
                                 </div>
                                 <div>
                                     <p className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Email Us</p>
-                                    <p className="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">techqings@gmail.com</p>
+                                    <p className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">techqings@gmail.com</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-6 group">
@@ -72,10 +72,10 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    <div className="px-4">
-                        <Card className="p-10 md:p-14 border border-slate-200 shadow-sm rounded-xl">
-                            <h3 className="text-2xl font-black mb-10 text-white uppercase tracking-tight">Send a <span className="text-primary italic">Message</span></h3>
-                            <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
+                    <div className="px-4 md:px-0">
+                        <Card className="p-6 sm:p-8 md:p-10 lg:p-14 border border-slate-200 shadow-sm rounded-xl">
+                            <h3 className="text-xl sm:text-2xl font-black mb-6 sm:mb-8 md:mb-10 text-white uppercase tracking-tight">Send a <span className="text-primary italic">Message</span></h3>
+                            <form className="space-y-6 sm:space-y-8" onSubmit={(e) => e.preventDefault()}>
                                 <div>
                                     <label className="block text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Topic of Interest</label>
                                     <select className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all text-slate-900 font-bold appearance-none">
