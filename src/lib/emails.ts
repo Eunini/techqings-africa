@@ -13,7 +13,7 @@ export async function sendConfirmationEmail(email: string, firstName: string, ty
 
     try {
         await resend.emails.send({
-            from: 'TechQings Africa <hello@techqings.africa>',
+            from: 'TechQings Africa <onboarding@resend.dev>',
             to: email,
             subject,
             html: content,
@@ -27,7 +27,7 @@ export async function sendConfirmationEmail(email: string, firstName: string, ty
 export async function sendAdminNotification(data: Record<string, unknown>) {
     try {
         await resend.emails.send({
-            from: 'TechQings Systems <system@techqings.africa>',
+            from: 'TechQings Systems <onboarding@resend.dev>',
             to: 'techqings@gmail.com',
             subject: `New ${(data.type as string)} Application: ${(data.firstName as string)} ${(data.lastName as string)}`,
             html: `<pre>${JSON.stringify(data, null, 2)}</pre>`,

@@ -15,9 +15,9 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <Section className="relative bg-gradient-to-br from-white via-primary/5 to-white overflow-hidden border-b border-indigo-50">
-        <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+      <Section className="relative bg-gradient-to-br from-white via-primary/3 to-primary/5 overflow-hidden border-b border-indigo-50">
+        <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
 
         <div className="relative z-10 text-center max-w-4xl mx-auto py-12 md:py-20 px-4">
           <span className="inline-block py-1.5 px-4 bg-primary/10 text-primary rounded-full text-xs font-black mb-6 tracking-widest uppercase">
