@@ -90,20 +90,51 @@ export async function submitApplication(formData: FormData) {
         ];
 
         // 1. Save to Google Sheets
-        await appendToSheet([row]);
+        console.log('Attempting to save to Google Sheets...');
+        try {
+            await appendToSheet([row]);
+            console.log('Successfully saved to Google Sheets');
+        } catch (sheetError) {
+            console.error('Google Sheets error:', sheetError);
+            throw new Error(`Google Sheets: ${sheetError instanceof Error ? sheetError.message : 'Unknown error'}`);
+        }
 
         // 2. Send Confirmation Email
-        await sendConfirmationEmail(validatedData.email, validatedData.firstName, validatedData.type);
+        console.log('Attempting to send confirmation email...');
+        try {
+            await sendConfirmationEmail(validatedData.email, validatedData.firstName, validatedData.type);
+            console.log('Successfully sent confirmation email');
+        } catch (emailError) {
+            console.error('Email error:', emailError);
+            throw new Error(`Email: ${emailError instanceof Error ? emailError.message : 'Unknown error'}`);
+        }
 
         // 3. Notify Admin
-        await sendAdminNotification(validatedData);
+        console.log('Attempting to send admin notification...');
+        try {
+            await sendAdminNotification(validatedData);
+            console.log('Successfully sent admin notification');
+        } catch (adminError) {
+            console.error('Admin notification error:', adminError);
+            // Don't throw here - admin email is non-critical
+        }
 
         return { success: true };
     } catch (error) {
         if (error instanceof z.ZodError) {
-            return { success: false, error: error.issues?.[0]?.message || 'Validation error' };
+            const firstError = error.issues?.[0];
+            const errorMsg = firstError?.message || 'Validation error';
+            console.error('Validation error:', errorMsg, firstError);
+            return { success: false, error: errorMsg };
         }
+        
         console.error('Submission error:', error);
+        
+        if (error instanceof Error) {
+            console.error('Error details:', error.message);
+            return { success: false, error: error.message };
+        }
+        
         return { success: false, error: "Failed to process application. Please try again." };
     }
 }

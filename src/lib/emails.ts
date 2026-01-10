@@ -20,6 +20,7 @@ export async function sendConfirmationEmail(email: string, firstName: string, ty
         });
     } catch (error) {
         console.error('Error sending confirmation email:', error);
+        throw new Error('Failed to send confirmation email');
     }
 }
 
@@ -33,5 +34,6 @@ export async function sendAdminNotification(data: Record<string, unknown>) {
         });
     } catch (error) {
         console.error('Error sending admin notification:', error);
+        throw new Error('Failed to send admin notification');
     }
 }
