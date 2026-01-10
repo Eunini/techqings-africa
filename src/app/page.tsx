@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Metadata } from "next";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
@@ -15,9 +16,9 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <Section className="relative bg-gradient-to-br from-white via-primary/3 to-primary/5 overflow-hidden border-b border-indigo-50">
-        <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+      <Section className="relative bg-gradient-to-br from-white to-slate-50 overflow-hidden border-b border-indigo-50">
+        <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-primary/3 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-72 h-72 bg-primary/3 rounded-full blur-3xl"></div>
 
         <div className="relative z-10 text-center max-w-4xl mx-auto py-12 md:py-20 px-4">
           <span className="inline-block py-1.5 px-4 bg-primary/10 text-primary rounded-full text-xs font-black mb-6 tracking-widest uppercase">
@@ -63,7 +64,7 @@ export default function Home() {
       <Section className="bg-white">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="order-2 md:order-1">
-            <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] bg-gradient-to-tr from-[#5B189A] via-primary to-[#D8B4FE] rounded-3xl overflow-hidden shadow-2xl group">
+            <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl overflow-hidden shadow-2xl group">
               <Image
                 src="/images/african-woman-tech.png"
                 alt="Empowered African Woman in Tech"
@@ -99,14 +100,14 @@ export default function Home() {
       </Section>
 
       {/* The Program Section */}
-      <Section className="bg-gradient-to-br from-[#5B189A] via-primary to-primary-hover relative overflow-hidden py-24 md:py-32">
+      <Section className="bg-gradient-to-br from-purple-50 to-white relative overflow-hidden py-24 md:py-32">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.1),transparent)]"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
 
         <div className="relative z-10 text-center mb-16">
-          <span className="text-white/90 font-black text-xs tracking-[0.2em] uppercase mb-4 block">The Flagship Program</span>
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-4 text-white tracking-tight">The FutureTech Program</h2>
-          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+          <span className="text-slate-700 font-black text-xs tracking-[0.2em] uppercase mb-4 block">The Flagship Program</span>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-4 text-slate-900 tracking-tight">The FutureTech Program</h2>
+          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Our 7-week intensive curriculum designed for the next wave of African tech leaders.
           </p>
         </div>
@@ -115,13 +116,13 @@ export default function Home() {
           {programs.map((program) => {
             const IconComponent = (Icons as any)[program.icon];
             return (
-              <Card key={program.title} className="flex flex-col h-full bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl p-8 group hover:bg-white/15 hover:scale-[1.02] transition-all duration-500">
-                <div className="p-4 bg-white/10 rounded-2xl w-fit mb-6 group-hover:bg-white/20 transition-colors duration-500">
-                  {IconComponent && <IconComponent className="w-8 h-8 text-white transition-colors duration-500" />}
+              <Card key={program.title} className="flex flex-col h-full bg-white/80 backdrop-blur-md border border-purple-200 shadow-md p-8 group hover:bg-white hover:shadow-lg transition-all duration-500">
+                <div className="p-4 bg-primary/10 rounded-2xl w-fit mb-6 group-hover:bg-primary/20 transition-colors duration-500">
+                  {IconComponent && <IconComponent className="w-8 h-8 text-primary transition-colors duration-500" />}
                 </div>
-                <h3 className="text-xl font-black mb-4 text-white">{program.track}</h3>
-                <p className="text-white/80 text-sm mb-8 flex-grow leading-relaxed">{program.description}</p>
-                <Button href="/programs" className="w-full text-sm bg-slate-900 text-white hover:bg-slate-800 shadow-xl">View Track Details</Button>
+                <h3 className="text-xl font-black mb-4 text-slate-900">{program.track}</h3>
+                <p className="text-slate-600 text-sm mb-8 flex-grow leading-relaxed">{program.description}</p>
+                <Button href="/programs" className="w-full text-sm bg-primary text-white hover:bg-primary-hover shadow-md">View Track Details</Button>
               </Card>
             );
           })}
@@ -129,11 +130,11 @@ export default function Home() {
       </Section>
 
       {/* CTA Section */}
-      <Section className="bg-gradient-to-tr from-[#5B189A] via-primary to-[#7A25D9] text-white py-24 text-center relative overflow-hidden">
+      <Section className="bg-gradient-to-br from-indigo-50 to-white text-slate-900 py-24 text-center relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent)]"></div>
         <div className="relative z-10">
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-8 tracking-tighter">Ready to join the <span className="italic underline decoration-accent decoration-8">sisterhood</span>?</h2>
-          <p className="text-lg md:text-xl mb-12 opacity-80 max-w-2xl mx-auto leading-relaxed px-4">
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-8 tracking-tighter">Ready to join the <span className="italic underline decoration-primary decoration-8">sisterhood</span>?</h2>
+          <p className="text-lg md:text-xl mb-12 opacity-70 max-w-2xl mx-auto leading-relaxed px-4 text-slate-800">
             Applications for Cohort 1 of the FutureTech Program are now open. Be part of the first wave of TechQings.
           </p>
           <Button href="/apply" className="text-lg px-12 py-5 shadow-2xl bg-slate-900 text-white hover:bg-slate-800 transition-all font-black">

@@ -30,7 +30,7 @@ const Navbar = () => {
         <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-lg border-b border-indigo-100 py-3' : 'bg-transparent py-5'}`}>
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-3 group">
-                    <div className="relative w-12 h-12 md:w-16 md:h-16 overflow-hidden rounded-lg bg-white/10 p-1 group-hover:scale-110 transition-transform">
+                    <div className="relative w-12 h-12 md:w-16 md:h-16 overflow-hidden rounded-lg p-1 group-hover:scale-110 transition-transform">
                         <Image
                             src="/logo.png"
                             alt="TechQings Logo"
