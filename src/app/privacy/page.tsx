@@ -1,4 +1,5 @@
 import Section from '@/components/ui/Section';
+import { Mail, Globe } from 'lucide-react';
 
 export const metadata = {
   title: 'Privacy Policy | TechQings Africa',
@@ -105,9 +106,15 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-2xl font-bold text-slate-900 mb-4">10. Contact Us</h2>
               <p>If you have questions or concerns about this Privacy Policy, contact us at:</p>
-              <ul className="list-none pl-0 space-y-2">
-                <li>📧 <strong>Email:</strong> techqings@gmail.com</li>
-                <li>🌍 <strong>Website:</strong> https://techqings-africa.vercel.app</li>
+              <ul className="list-none pl-0 space-y-3">
+                <li className="flex items-center gap-3">
+                  <Mail className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span><strong>Email:</strong> <a href="mailto:techqings@gmail.com" className="text-primary hover:underline">techqings@gmail.com</a></span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Globe className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span><strong>Website:</strong> <a href="https://techqings-africa.vercel.app" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://techqings-africa.vercel.app</a></span>
+                </li>
               </ul>
             </section>
           </div>
