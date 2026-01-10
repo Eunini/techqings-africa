@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Facebook, Instagram, Mail, Send } from 'lucide-react';
+import { Facebook, Instagram, Mail, Send, MessageCircle, Slack } from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-16 lg:gap-24">
                     <div className="md:col-span-12 lg:col-span-5">
                         <Link href="/" className="flex items-center gap-4 mb-8 group">
-                            <div className="relative w-12 h-12 overflow-hidden rounded-xl bg-white/5 p-1.5 group-hover:scale-110 transition-transform">
+                            <div className="relative w-14 h-14 overflow-hidden rounded-xl bg-white/5 p-1.5 group-hover:scale-110 transition-transform">
                                 <Image src="/logo.png" alt="TechQings Logo" fill className="object-contain" />
                             </div>
                             <span className="font-black text-2xl text-white tracking-tighter uppercase">
@@ -29,6 +29,14 @@ const Footer = () => {
                             <a href="https://www.instagram.com/techqings_" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary group transition-all duration-300">
                                 <span className="sr-only">Instagram</span>
                                 <Instagram className="w-5 h-5 group-hover:text-white transition-colors" />
+                            </a>
+                            <a href="https://chat.whatsapp.com/KFsq7gGFXDi832ip8Oj3jo" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-green-500 group transition-all duration-300">
+                                <span className="sr-only">WhatsApp Community</span>
+                                <MessageCircle className="w-5 h-5 group-hover:text-white transition-colors" />
+                            </a>
+                            <a href="https://wa.me/message/TFFG2ETW5L3CH1" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-green-500 group transition-all duration-300">
+                                <span className="sr-only">WhatsApp Direct</span>
+                                <Send className="w-5 h-5 group-hover:text-white transition-colors" />
                             </a>
                         </div>
                     </div>

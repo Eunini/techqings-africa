@@ -9,23 +9,23 @@ const applicationSchema = z.object({
     lastName: z.string().min(2, "Last name is too short"),
     email: z.string().email("Invalid email address"),
     phone: z.string().min(5, "Invalid phone number"),
-    track: z.string(),
-    motivation: z.string().optional(),
-    linkedin: z.string().url().optional(),
+    track: z.string().min(1, "Please select a track"),
+    motivation: z.string().optional().nullable(),
+    linkedin: z.string().url().optional().nullable(),
     type: z.enum(['learner', 'mentor']),
-    sessionPreference: z.enum(['Tuesday & Thursday', 'Weekends (Sat-Sun)', 'Either']).optional(),
-    hasPC: z.enum(['Yes', 'No']).optional(),
-    hasInternet: z.enum(['Yes', 'No']).optional(),
-    occupation: z.enum(['Student', 'Working / Employed', 'Self-employed', 'Other']).optional(),
+    sessionPreference: z.enum(['Tuesday & Thursday', 'Weekends (Sat-Sun)', 'Either']).optional().nullable(),
+    hasPC: z.enum(['Yes', 'No']).optional().nullable(),
+    hasInternet: z.enum(['Yes', 'No']).optional().nullable(),
+    occupation: z.enum(['Student', 'Working / Employed', 'Self-employed', 'Other']).optional().nullable(),
     yearsExperience: z.preprocess((val) => {
         if (val === null || val === undefined || val === '') return undefined;
         const n = Number(val);
         return Number.isNaN(n) ? undefined : n;
     }, z.number().nonnegative().optional()),
-    preferredTime: z.string().optional(),
-    mentorBio: z.string().optional(),
-    expertise: z.string().optional(),
-    menteeCapacity: z.enum(['1', '2-3', '4-5', '6+']).optional(),
+    preferredTime: z.string().optional().nullable(),
+    mentorBio: z.string().optional().nullable(),
+    expertise: z.string().optional().nullable(),
+    menteeCapacity: z.enum(['1', '2-3', '4-5', '6+']).optional().nullable(),
     yearsInTech: z.preprocess((val) => {
         if (val === null || val === undefined || val === '') return undefined;
         const n = Number(val);
@@ -36,7 +36,7 @@ const applicationSchema = z.object({
         const n = Number(val);
         return Number.isNaN(n) ? undefined : n;
     }, z.number().nonnegative().optional()),
-    _honey: z.string().max(0, "Spam detected"), // Honeypot field
+    _honey: z.string().max(1, "Spam detected").optional(), // Honeypot field
 });
 
 export async function submitApplication(formData: FormData) {

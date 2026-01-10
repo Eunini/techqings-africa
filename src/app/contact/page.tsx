@@ -3,7 +3,7 @@
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
-import { Mail, Instagram, Facebook } from "lucide-react";
+import { Mail, Instagram, Facebook, MessageCircle, Send } from "lucide-react";
 
 export default function Contact() {
     return (
@@ -48,13 +48,24 @@ export default function Contact() {
                                 </div>
                             </div>
                             <div className="flex items-center gap-6 group">
-                                <div className="w-16 h-16 bg-[#F3E8FF] text-primary rounded-2xl flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-white transition-all shadow-sm group-hover:shadow-lg group-hover:-translate-y-1">
-                                    <Facebook className="w-8 h-8" />
+                                <div className="w-16 h-16 bg-[#F3E8FF] text-primary rounded-2xl flex items-center justify-center text-2xl group-hover:bg-green-500 group-hover:text-white transition-all shadow-sm group-hover:shadow-lg group-hover:-translate-y-1">
+                                    <MessageCircle className="w-8 h-8" />
                                 </div>
                                 <div>
-                                    <a href="https://facebook.com/share/1GYgdo8MbD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="block">
-                                        <p className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Facebook</p>
-                                        <p className="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">TechQings Africa</p>
+                                    <a href="https://chat.whatsapp.com/KFsq7gGFXDi832ip8Oj3jo" target="_blank" rel="noopener noreferrer" className="block">
+                                        <p className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">WhatsApp Community</p>
+                                        <p className="text-xl font-bold text-slate-900 group-hover:text-green-500 transition-colors">Join Our Community</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-6 group">
+                                <div className="w-16 h-16 bg-[#F3E8FF] text-primary rounded-2xl flex items-center justify-center text-2xl group-hover:bg-green-500 group-hover:text-white transition-all shadow-sm group-hover:shadow-lg group-hover:-translate-y-1">
+                                    <Send className="w-8 h-8" />
+                                </div>
+                                <div>
+                                    <a href="https://wa.me/message/TFFG2ETW5L3CH1" target="_blank" rel="noopener noreferrer" className="block">
+                                        <p className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">WhatsApp Direct</p>
+                                        <p className="text-xl font-bold text-slate-900 group-hover:text-green-500 transition-colors">Message Us</p>
                                     </a>
                                 </div>
                             </div>
