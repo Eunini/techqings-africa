@@ -38,5 +38,13 @@ export const mentors = [
         track: "AI & Machine Learning",
         bio: "Full-stack software engineer and AI/ML practitioner with over six years of experience building scalable web, mobile, and intelligent systems. Specializes in backend architectures, modern frontend frameworks, and applied machine learning, with a growing focus on developing AI-driven solutions for education, low-resource language revitalization, and healthcare in Africa.",
         image: "/images/vang.png"
+    },
+    {
+        name: "Abdulsalam Oluwaseun Ayeleru",
+        role: "Software Developer | AI Engineer",
+        company: "Systems & AI Solutions",
+        track: "AI & Machine Learning",
+        bio: "Software developer and AI engineer who enjoys building things from the ground up. Works across low-level systems and machine learning, focusing on understanding how things actually work rather than treating them as black boxes. Curious by nature, practical in execution, and always pushing to improve skills by building real systems.",
+        image: "/images/seun.png"
     }
 ];
