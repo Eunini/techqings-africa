@@ -67,7 +67,7 @@ export default function Home() {
           <div className="order-2 md:order-1">
             <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl overflow-hidden shadow-2xl group">
               <Image
-                src="/images/african-woman-tech.png"
+                src="/images/african-woman.jpg"
                 alt="Empowered African Woman in Tech"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
