@@ -6,6 +6,7 @@ import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 import { CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { africanCountries } from '@/data/countries';
 
 import { submitApplication } from '../actions/apply';
 
@@ -107,6 +108,16 @@ function ApplyForm() {
             <div>
                 <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Email Address <span className="text-red-500">*</span></label>
                 <input required name="email" type="email" className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all text-slate-900 font-bold" placeholder="hello@example.com" />
+            </div>
+
+            <div>
+                <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Country <span className="text-red-500">*</span></label>
+                <select required name="country" className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all text-slate-900 font-bold appearance-none">
+                    <option value="">Select your country</option>
+                    {africanCountries.map((country) => (
+                        <option key={country} value={country}>{country}</option>
+                    ))}
+                </select>
             </div>
 
             {/* Hidden field for active tab type */}

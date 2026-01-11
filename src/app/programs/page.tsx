@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
-import MobileCarousel from "@/components/ui/MobileCarousel";
+import EmblaCarousel from "@/components/ui/EmblaCarousel";
 import { programs, cohortInfo } from "@/data/programs";
 import * as Icons from "lucide-react";
 
@@ -89,7 +89,7 @@ export default function Programs() {
                     </p>
                 </div>
 
-                <MobileCarousel>
+                <EmblaCarousel>
                     {programs.map((p) => {
                         const IconComponent = (Icons as any)[p.icon];
                         return (
@@ -107,7 +107,7 @@ export default function Programs() {
                             </Card>
                         );
                     })}
-                </MobileCarousel>
+                </EmblaCarousel>
             </Section>
         </main>
     );

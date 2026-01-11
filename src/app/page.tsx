@@ -5,7 +5,6 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
-import MobileCarousel from "@/components/ui/MobileCarousel";
 import { programs } from "@/data/programs";
 import * as Icons from "lucide-react";
 

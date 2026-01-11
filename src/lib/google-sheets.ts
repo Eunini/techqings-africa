@@ -41,7 +41,7 @@ export async function appendToSheet(data: (string | number)[][]) {
         });
 
         if (!response.data.values || response.data.values.length === 0) {
-            const headers = ['Timestamp', 'Type', 'First Name', 'Last Name', 'Email', 'Phone', 'Track', 'Session Preference', 'Has PC', 'Has Internet', 'Occupation', 'Years Experience', 'Preferred Time', 'Mentor Bio', 'Expertise', 'Mentee Capacity', 'Years In Tech', 'Years Mentoring', 'Motivation/LinkedIn'];
+            const headers = ['Timestamp', 'Type', 'First Name', 'Last Name', 'Email', 'Country', 'Phone', 'Track', 'Session Preference', 'Has PC', 'Has Internet', 'Occupation', 'Years Experience', 'Preferred Time', 'Mentor Bio', 'Expertise', 'Mentee Capacity', 'Years In Tech', 'Years Mentoring', 'Motivation/LinkedIn'];
             await sheets.spreadsheets.values.update({
                 spreadsheetId,
                 range: 'Sheet1!A1',

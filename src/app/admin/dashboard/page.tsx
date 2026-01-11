@@ -10,6 +10,7 @@ interface Application {
     firstName: string;
     lastName: string;
     email: string;
+    country: string;
     phone: string;
     type: string;
     track?: string;
@@ -80,6 +81,7 @@ export default function AdminDashboard() {
             'First Name',
             'Last Name',
             'Email',
+            'Country',
             'Phone',
             'Track',
             'Session Preference',
@@ -101,6 +103,7 @@ export default function AdminDashboard() {
             app.firstName,
             app.lastName,
             app.email,
+            app.country,
             app.phone,
             ((app as unknown) as Record<string, unknown>).track || 'N/A',
             app.sessionPreference || 'N/A',
@@ -228,6 +231,7 @@ export default function AdminDashboard() {
                                 <tr className="bg-slate-100 border-b border-slate-200">
                                     <th className="px-6 py-4 text-left font-black uppercase tracking-widest text-slate-600">Name</th>
                                     <th className="px-6 py-4 text-left font-black uppercase tracking-widest text-slate-600">Email</th>
+                                    <th className="px-6 py-4 text-left font-black uppercase tracking-widest text-slate-600">Country</th>
                                     <th className="px-6 py-4 text-left font-black uppercase tracking-widest text-slate-600">Phone</th>
                                     <th className="px-6 py-4 text-left font-black uppercase tracking-widest text-slate-600">Type</th>
                                     <th className="px-6 py-4 text-left font-black uppercase tracking-widest text-slate-600">Track</th>
@@ -240,6 +244,7 @@ export default function AdminDashboard() {
                                     <tr key={idx} className="border-b border-slate-200 hover:bg-slate-50 transition-colors">
                                         <td className="px-6 py-4 font-bold text-slate-900">{app.firstName} {app.lastName}</td>
                                         <td className="px-6 py-4 text-slate-600 text-xs font-medium">{app.email}</td>
+                                        <td className="px-6 py-4 text-slate-600 text-xs font-medium">{app.country}</td>
                                         <td className="px-6 py-4 text-slate-600 text-xs font-medium">{app.phone}</td>
                                         <td className="px-6 py-4">
                                             <span className={`px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest ${

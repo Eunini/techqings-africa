@@ -30,5 +30,13 @@ export const mentors = [
         track: "Cybersecurity",
         bio: "Aspiring cybersecurity professional with a year of focused learning and hands-on experience in cybersecurity fundamentals. Building practical skills through labs and projects with a growing interest in protecting systems and understanding security threats. Motivated, approachable, and committed to continuous learning.",
         image: "/images/bright.jpg"
+    },
+    {
+        name: "Ahmad A. KHIDIR",
+        role: "Full-Stack Software Engineer | AI/ML Practitioner",
+        company: "Scalable Systems & AI Solutions",
+        track: "AI & Machine Learning",
+        bio: "Full-stack software engineer and AI/ML practitioner with over six years of experience building scalable web, mobile, and intelligent systems. Specializes in backend architectures, modern frontend frameworks, and applied machine learning, with a growing focus on developing AI-driven solutions for education, low-resource language revitalization, and healthcare in Africa.",
+        image: "/images/vang.png"
     }
 ];

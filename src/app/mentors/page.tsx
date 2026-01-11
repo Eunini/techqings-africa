@@ -3,7 +3,7 @@ import Image from "next/image";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
-import MobileCarousel from "@/components/ui/MobileCarousel";
+import EmblaCarousel from "@/components/ui/EmblaCarousel";
 import { mentors } from "@/data/mentors";
 
 export const metadata: Metadata = {
@@ -23,17 +23,17 @@ export default function Mentors() {
             </Section>
 
             <Section className="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 md:py-24 lg:py-32">
-                <MobileCarousel>
+                <EmblaCarousel>
                     {mentors.map((mentor) => (
-                        <div key={mentor.name} className="group relative">
+                        <div key={mentor.name} className="group relative h-full">
                             {/* Card background with gradient border */}
                             <div className="absolute inset-0 bg-gradient-to-br from-primary via-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                             
-                            <Card className="relative p-0 overflow-hidden bg-white rounded-2xl border border-slate-200 shadow-sm group-hover:shadow-xl transition-all duration-500">
+                            <Card className="relative p-0 overflow-hidden bg-white rounded-2xl border border-slate-200 shadow-sm group-hover:shadow-xl transition-all duration-500 h-full flex flex-col">
                                 {/* Top accent bar with gradient */}
                                 <div className="h-1.5 bg-gradient-to-r from-primary via-purple-500 to-pink-500"></div>
                                 
-                                <div className="p-4 sm:p-6 md:p-8 text-center">
+                                <div className="p-4 sm:p-6 md:p-8 text-center flex flex-col h-full">
                                     {/* Avatar with creative background */}
                                     <div className="relative mb-4 sm:mb-6 md:mb-8">
                                         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-pink-200/20 w-48 h-48 rounded-full blur-xl mx-auto"></div>
@@ -70,7 +70,7 @@ export default function Mentors() {
                                     </div>
                                     
                                     {/* Bio */}
-                                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium mb-3 sm:mb-4 md:mb-6 h-auto group-hover:text-slate-700 transition-colors duration-300">{mentor.bio}</p>
+                                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium mb-3 sm:mb-4 md:mb-6 flex-grow group-hover:text-slate-700 transition-colors duration-300">{mentor.bio}</p>
                                     
                                     {/* Bottom accent line */}
                                     <div className="w-12 h-1 bg-gradient-to-r from-primary to-pink-500 rounded-full mx-auto group-hover:w-24 transition-all duration-500"></div>
@@ -78,7 +78,7 @@ export default function Mentors() {
                             </Card>
                         </div>
                     ))}
-                </MobileCarousel>
+                </EmblaCarousel>
             </Section>
 
             <Section className="bg-white pb-24">
