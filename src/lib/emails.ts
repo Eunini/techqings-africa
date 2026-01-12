@@ -32,7 +32,7 @@ export async function sendConfirmationEmail(email: string, firstName: string, ty
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://techqings.africa/logo.png" alt="TechQings Africa" class="logo">
+            <img src="https://techqings-africa.vercel.app/logo.png" alt="TechQings Africa" class="logo">
             <h1>Welcome to TechQings Africa</h1>
         </div>
         
@@ -47,7 +47,7 @@ export async function sendConfirmationEmail(email: string, firstName: string, ty
             
             <p>In the meantime:</p>
             <ul>
-                <li>Check out our <a href="https://techqings.africa/programs">program details</a></li>
+                <li>Check out our <a href="https://techqings-africa.vercel.app/programs">program details</a></li>
                 <li>Connect with our community on <a href="https://chat.whatsapp.com/KFsq7gGFXDi832ip8Oj3jo">WhatsApp</a></li>
                 <li>Join our <a href="https://join.slack.com/t/techqings/shared_invite/zt-3n01v27pj-8q7Eup2AhgM39T0wmdpKug">Slack community</a> for real-time discussions</li>
                 <li><strong>Follow us on social media</strong> - this is a criteria for selection!</li>
@@ -63,7 +63,7 @@ export async function sendConfirmationEmail(email: string, firstName: string, ty
         
         <div class="footer">
             <p><strong>TechQings Africa</strong> | Empowering African Women for Future Tech</p>
-            <p><a href="https://techqings.africa">Visit Website</a> | <a href="https://techqings.africa/privacy">Privacy Policy</a> | <a href="https://techqings.africa/terms">Terms of Service</a></p>
+            <p><a href="https://techqings-africa.vercel.app/">Visit Website</a> | <a href="https://techqings-africa.vercel.app/privacy">Privacy Policy</a> | <a href="https://techqings-africa.vercel.app/terms">Terms of Service</a></p>
             <p>
                 Follow us on social media:
                 <a href="https://www.instagram.com/techqings_" style="margin: 0 8px; color: #8B2CF5; text-decoration: none;">Instagram</a> •
@@ -72,6 +72,11 @@ export async function sendConfirmationEmail(email: string, firstName: string, ty
             </p>
             <p>&copy; 2026 TechQings Africa. All rights reserved.</p>
         </div>
+    </div>
+</body>
+</html>`;
+
+    const mentorContent = `
 <!DOCTYPE html>
 <html>
 <head>
@@ -96,7 +101,7 @@ export async function sendConfirmationEmail(email: string, firstName: string, ty
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://techqings.africa/logo.png" alt="TechQings Africa" class="logo">
+            <img src="https://techqings-africa.vercel.app/logo.png" alt="TechQings Africa" class="logo">
             <h1>Mentor Application Received</h1>
         </div>
         
@@ -133,7 +138,7 @@ export async function sendConfirmationEmail(email: string, firstName: string, ty
         
         <div class="footer">
             <p><strong>TechQings Africa</strong> | Empowering African Women for Future Tech</p>
-            <p><a href="https://techqings.africa">Visit Website</a> | <a href="https://techqings.africa/privacy">Privacy Policy</a> | <a href="https://techqings.africa/terms">Terms of Service</a></p>
+            <p><a href="https://techqings-africa.vercel.app/">Visit Website</a> | <a href="https://techqings-africa.vercel.app/privacy">Privacy Policy</a> | <a href="https://techqings-africa.vercel.app/terms">Terms of Service</a></p>
             <p>
                 Follow us on social media:
                 <a href="https://www.instagram.com/techqings_" style="margin: 0 8px; color: #8B2CF5; text-decoration: none;">Instagram</a> •
