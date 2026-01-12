@@ -4,7 +4,7 @@ export const mentors = [
         role: "Cybersecurity Analyst | Ethical Hacking Tutor",
         company: "Blue-Team Security Professional",
         track: "Cybersecurity",
-        bio: "Cybersecurity analyst and ethical hacking tutor with over two years of hands-on experience. Specializes in web application security, penetration testing, and blue-team defensive operations. Passionate about helping individuals build strong security fundamentals through practical, real-world learning.",
+        bio: "Cybersecurity analyst and ethical hacking tutor with over five years of hands-on experience. Specializes in web application security, penetration testing, and blue-team defensive operations. Passionate about helping individuals build strong security fundamentals through practical, real-world learning.",
         image: "/images/luciano.jpg"
     },
     {
