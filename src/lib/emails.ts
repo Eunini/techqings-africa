@@ -48,8 +48,9 @@ export async function sendConfirmationEmail(email: string, firstName: string, ty
             <p>In the meantime:</p>
             <ul>
                 <li>Check out our <a href="https://techqings.africa/programs">program details</a></li>
-                <li>Connect with our community on <a href="https://chat.whatsapp.com/techqings">WhatsApp</a></li>
-                <li>Follow us on social media for updates</li>
+                <li>Connect with our community on <a href="https://chat.whatsapp.com/KFsq7gGFXDi832ip8Oj3jo">WhatsApp</a></li>
+                <li>Join our <a href="https://join.slack.com/t/techqings/shared_invite/zt-3n01v27pj-8q7Eup2AhgM39T0wmdpKug">Slack community</a> for real-time discussions</li>
+                <li><strong>Follow us on social media</strong> - this is a criteria for selection!</li>
             </ul>
             
             <p>Questions? Reach out to us at <a href="mailto:techqings@gmail.com">techqings@gmail.com</a></p>
@@ -63,13 +64,14 @@ export async function sendConfirmationEmail(email: string, firstName: string, ty
         <div class="footer">
             <p><strong>TechQings Africa</strong> | Empowering African Women for Future Tech</p>
             <p><a href="https://techqings.africa">Visit Website</a> | <a href="https://techqings.africa/privacy">Privacy Policy</a> | <a href="https://techqings.africa/terms">Terms of Service</a></p>
+            <p>
+                Follow us on social media:
+                <a href="https://www.instagram.com/techqings_" style="margin: 0 8px; color: #8B2CF5; text-decoration: none;">Instagram</a> •
+                <a href="https://facebook.com/share/1GYgdo8MbD/?mibextid=wwXIfr" style="margin: 0 8px; color: #8B2CF5; text-decoration: none;">Facebook</a> •
+                <a href="https://chat.whatsapp.com/KFsq7gGFXDi832ip8Oj3jo" style="margin: 0 8px; color: #8B2CF5; text-decoration: none;">WhatsApp Community</a>
+            </p>
             <p>&copy; 2026 TechQings Africa. All rights reserved.</p>
         </div>
-    </div>
-</body>
-</html>`;
-
-    const mentorContent = `
 <!DOCTYPE html>
 <html>
 <head>
@@ -115,6 +117,12 @@ export async function sendConfirmationEmail(email: string, firstName: string, ty
                 <li>Make lasting impact in tech diversity</li>
             </ul>
             
+            <p>To stay connected with the TechQings team and community, please:</p>
+            <ul>
+                <li>Join our <a href="https://join.slack.com/t/techqings/shared_invite/zt-3n01v27pj-8q7Eup2AhgM39T0wmdpKug">Slack community</a> for real-time discussions</li>
+                <li><strong>Follow us on social media</strong> - this helps us reach more African women in tech</li>
+            </ul>
+            
             <p>Questions? Reach out to us at <a href="mailto:techqings@gmail.com">techqings@gmail.com</a></p>
             
             <p><strong>Thank you for believing in the mission! 💜</strong></p>
@@ -126,6 +134,12 @@ export async function sendConfirmationEmail(email: string, firstName: string, ty
         <div class="footer">
             <p><strong>TechQings Africa</strong> | Empowering African Women for Future Tech</p>
             <p><a href="https://techqings.africa">Visit Website</a> | <a href="https://techqings.africa/privacy">Privacy Policy</a> | <a href="https://techqings.africa/terms">Terms of Service</a></p>
+            <p>
+                Follow us on social media:
+                <a href="https://www.instagram.com/techqings_" style="margin: 0 8px; color: #8B2CF5; text-decoration: none;">Instagram</a> •
+                <a href="https://facebook.com/share/1GYgdo8MbD/?mibextid=wwXIfr" style="margin: 0 8px; color: #8B2CF5; text-decoration: none;">Facebook</a> •
+                <a href="https://chat.whatsapp.com/KFsq7gGFXDi832ip8Oj3jo" style="margin: 0 8px; color: #8B2CF5; text-decoration: none;">WhatsApp Community</a>
+            </p>
             <p>&copy; 2026 TechQings Africa. All rights reserved.</p>
         </div>
     </div>
